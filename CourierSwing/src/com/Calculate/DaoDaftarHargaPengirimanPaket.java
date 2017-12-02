@@ -29,75 +29,75 @@ private Tarif paketTarif;
        
    }
    public double hitunganHargaKirimPaketRegulerNonAsuransi(int inx){
-       double reg =0.0;
+       double regNonAsuransi =0.0;
        TarifDao tff = new TarifDao();
        Tarif trf = new Tarif();
        IndexPaket indPaket = new IndexPaket();
        indPaket = tff.getIndexPakets().get(inx);
-       reg =  indPaket.getReguler()*getBerat();
-       return reg;
+       regNonAsuransi =  indPaket.getReguler()*getBerat();
+       return regNonAsuransi;
    }
    public double hitunganHargaKirimPaketKilatNonAsuransi(int inx){
-       double reg =0.0;
+       double kilatNonAsuransi =0.0;
        TarifDao tff = new TarifDao();
        Tarif trf = new Tarif();
        IndexPaket indPaket = new IndexPaket();
        indPaket = tff.getIndexPakets().get(inx);
-       reg =  indPaket.getKilat()*getBerat();
-       return reg;
+       kilatNonAsuransi =  indPaket.getKilat()*getBerat();
+       return kilatNonAsuransi;
    }
    public double hitunganHargaKirimPaketSDSNonAsuransi(int inx){
-       double reg =0.0;
+       double SDSNonAsuransi =0.0;
        TarifDao tff = new TarifDao();
        Tarif trf = new Tarif();
        IndexPaket indPaket = new IndexPaket();
        indPaket = tff.getIndexPakets().get(inx);
-       reg =  indPaket.getSameDayService()*getBerat();
-       return reg;
+       SDSNonAsuransi =  indPaket.getSameDayService()*getBerat();
+       return SDSNonAsuransi;
    }
    public double hitunganHargaKirimPaketOnsNonAsuransi(int inx){
-       double reg =0.0;
+       double OnsNonAsuransi =0.0;
        TarifDao tff = new TarifDao();
        Tarif trf = new Tarif();
        IndexPaket indPaket = new IndexPaket();
        indPaket = tff.getIndexPakets().get(inx);
-       reg =  indPaket.getOneDayService()*getBerat();
-       return reg;
+       OnsNonAsuransi =  indPaket.getOneDayService()*getBerat();
+       return OnsNonAsuransi;
    }
    public double hitunganHargaKirimPaketHdsNonAsuransi(int inx){
-       double reg =0.0;
+       double hdsNonAsuransi =0.0;
        TarifDao tff = new TarifDao();
        Tarif trf = new Tarif();
        IndexPaket indPaket = new IndexPaket();
        indPaket = tff.getIndexPakets().get(inx);
-       reg =  indPaket.getHourDayService()*getBerat();
-       return reg;
+       hdsNonAsuransi =  indPaket.getHourDayService()*getBerat();
+       return hdsNonAsuransi;
    }
    
    public double hitunganHargaKirimPaketRegulerDgnAsuransi(int inx){
        double biayaAsuransi =hitunganHargaKirimPaketRegulerDgnAsuransi(inx)*0.003;
-       double biaya = hitunganHargaKirimPaketRegulerDgnAsuransi(inx)+biayaAsuransi;
-      return biaya;
+       double RegulerAsuransi = hitunganHargaKirimPaketRegulerDgnAsuransi(inx)+biayaAsuransi;
+      return RegulerAsuransi;
    }
    public double hitungHargaKirimPaketKilatDgnAsuransi (int inx){
        double biayaAsuransi = hitungHargaKirimPaketKilatDgnAsuransi(inx)*0.003;
-       double biaya = hitungHargaKirimPaketKilatDgnAsuransi(inx)+biayaAsuransi;
-       return biaya;
+       double KilatAsuransi = hitungHargaKirimPaketKilatDgnAsuransi(inx)+biayaAsuransi;
+       return KilatAsuransi;
    }
    public double hitungHargaKirimPaketSDSDgnAsuransi (int inx){
        double biayaAsuransi = hitungHargaKirimPaketSDSDgnAsuransi(inx)*0.003;
-       double biaya = hitungHargaKirimPaketSDSDgnAsuransi(inx)+biayaAsuransi;
-       return biaya;
+       double SDSAsuransi = hitungHargaKirimPaketSDSDgnAsuransi(inx)+biayaAsuransi;
+       return SDSAsuransi;
    }
    public double  hitungHargaKirimPaketONSDgnAsuransi (int inx){
        double biayaAsuransi = hitungHargaKirimPaketONSDgnAsuransi(inx)*0.003;
-       double biaya = hitungHargaKirimPaketONSDgnAsuransi(inx)+biayaAsuransi;
-       return biaya;
+       double ONSAsuransi = hitungHargaKirimPaketONSDgnAsuransi(inx)+biayaAsuransi;
+       return ONSAsuransi;
    }
    public double hitungHargaKirimPaketHDSDgnAsuransi (int inx){
        double biayaAsuransi = hitungHargaKirimPaketHDSDgnAsuransi (inx)*0.003;
-       double biaya = hitungHargaKirimPaketHDSDgnAsuransi(inx)+biayaAsuransi;
-       return biaya;
+       double HDSAsuransi = hitungHargaKirimPaketHDSDgnAsuransi(inx)+biayaAsuransi;
+       return HDSAsuransi;
    }
    public Tarif getPaketTarif() {
         return paketTarif;
@@ -122,6 +122,14 @@ private Tarif paketTarif;
      */
     public void setBerat(double berat) {
         this.berat = berat;
+    }
+
+    public String hitungHargaKirimPaketHDSDgnAsuransi() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    public String setPaketTarif() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
     

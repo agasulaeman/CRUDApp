@@ -30,6 +30,7 @@ public class TarifDao {
         String kotaTujuan = data[0];
         
         penerima.setTujuan(kotaTujuan);
+        
         penerima.setReguler(Double.parseDouble(data[1]));
         penerima.setKilat(Double.parseDouble(data[2]));
         penerima.setOneDayService(Double.parseDouble(data[3]));
